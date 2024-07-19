@@ -5,18 +5,6 @@ import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 export class News extends Component {
-  static defaultProps = {
-    country: "in",
-    pageSize: 8,
-    category: "general",
-  };
-
-  static propTypes = {
-    country: PropTypes.string,
-    pageSize: PropTypes.number,
-    category: PropTypes.string,
-  };
-
   capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
@@ -193,5 +181,17 @@ export class News extends Component {
     );
   }
 }
+
+News.defaultProps = {
+  country: "in",
+  pageSize: 8,
+  category: "general",
+};
+
+News.propTypes = {
+  country: PropTypes.string,
+  pageSize: PropTypes.number,
+  category: PropTypes.string,
+};
 
 export default News;
